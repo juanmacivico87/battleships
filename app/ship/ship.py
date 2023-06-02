@@ -1,4 +1,5 @@
 from os import system
+from random import randint
 from time import sleep
 
 class Ship(object):
@@ -7,6 +8,16 @@ class Ship(object):
     num_ships = 0
     ships_found = 0
     ships = []
+    
+    def set_ships_coordinates(self, board):
+        while(len(self.ships) < self.num_ships):
+            x = randint(0, (board.board_length - 1))
+            y = randint(0, (board.board_length - 1))
+            
+            if ([x, y] in self.ships):
+                continue
+            
+            self.ships.append([x, y])
 
     def check_num_ships(self):
         if (self.num_ships.isnumeric() == False):

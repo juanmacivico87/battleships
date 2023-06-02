@@ -21,6 +21,7 @@ class App(object):
     def run(self):
         self.player.set_player_name()
         self.ship.set_num_ships()
+        self.ship.set_ships_coordinates(self.board)
         self.board.set_board()
         self.board.print_board(self.player, self.ship)
         self.play()
