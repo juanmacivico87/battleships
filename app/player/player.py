@@ -17,3 +17,11 @@ class Player(object):
         system('clear')
         print('Welcome to the game %s!!!' % (self.name))
         sleep(2)
+        
+    def play(self, has_ship):
+        if (has_ship == False):
+            self.lifes -= 1
+            return
+            
+        self.score += (self.lifes * 2)
+        

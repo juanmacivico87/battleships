@@ -13,6 +13,7 @@ class Board(object):
 
     def print_board(self, player, ship):
         system('clear')
+        # print('Help: %s' % (ship.ships))
         print('Player: %s' % (player.name))
         print('Ships: %d (%d)' % (ship.num_ships, ship.ships_found))
         print('Score: %d' % (player.score))
@@ -22,3 +23,7 @@ class Board(object):
             print((' ').join(row))
             
         print('\n')
+        
+    def display_box(self, x, y, has_ship):
+        self.board[x][y] = self.ship if has_ship == True else self.empty
+            

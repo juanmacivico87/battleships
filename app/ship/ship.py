@@ -58,3 +58,11 @@ class Ship(object):
 
         print('Great!!! %d ships coming up!!!' % (self.num_ships))
         sleep(2)
+        
+    def find_ship(self, x, y):
+        if ([x, y] not in self.ships):
+            return False
+        
+        self.ships_found += 1
+        self.ships.remove([x, y])
+        return True

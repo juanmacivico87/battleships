@@ -11,10 +11,26 @@ class App(object):
     def play(self):
         while(self.player.lifes > 0):
             x = input('Please, enter X coordinate (0 - 9)')
+            
+            if (x.isnumeric() == False):
+                x = 0
+                
             y = input('Please, enter Y coordinate (0 - 9)')
-
-            self.player.lifes -= 1
+                
+            if (y.isnumeric() == False):
+                y = 0
+                
+            x = int(x)
+            y = int(y)
+            
+            has_ship = self.ship.find_ship(x, y)
+            self.board.display_box(x, y, has_ship)
+            self.player.play(has_ship)
             self.board.print_board(self.player, self.ship)
+            
+            if (len(self.ship.ships) <= 0):
+                print('\nYou\'re a winner!!!')
+                return
 
         print('\nYou\'re a loser!!!')
         
