@@ -15,7 +15,7 @@ class Player(object):
             self.name = input('I couldn\'t read your name clearly. Please, could you tell me again?? \n')
 
         system('clear')
-        print('Welcome to the game %s!!!' % (self.name))
+        print(f'Welcome to the game {self.name}!!!')
         sleep(2)
         
     def play(self, has_ship):
