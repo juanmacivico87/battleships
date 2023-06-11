@@ -12,7 +12,7 @@ class App(object):
         coordinate = self.board.board_length
                 
         while(coordinate >= self.board.board_length):
-            coordinate = input('Please, enter %s coordinate between 0 and %d: ' % (axis, (self.board.board_length - 1)))
+            coordinate = input(f'Please, enter {axis} coordinate between 0 and {(self.board.board_length - 1)}: ')
             
             if (coordinate.isnumeric() == False):
                 coordinate = self.board.board_length
