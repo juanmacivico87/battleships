@@ -13,11 +13,11 @@ class Board(object):
 
     def print_board(self, player, ship):
         system('clear')
-        # print('Help: %s' % (ship.ships))
-        print('Player: %s' % (player.name))
-        print('Ships: %d (%d)' % (ship.num_ships, ship.ships_found))
-        print('Score: %d' % (player.score))
-        print('Lifes: %s\n' % ('*' * player.lifes))
+        # print(f'Help: {ship.ships}')
+        print(f'Player: {player.name}')
+        print(f'Ships: {ship.num_ships} ({ship.ships_found})')
+        print(f'Score: {player.score}')
+        print(f'Lifes: {("*" * player.lifes)}\n')
 
         for row in self.board:
             print((' ').join(row))
