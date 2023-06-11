@@ -29,6 +29,8 @@ Did you like it? If so, add a star to the repository to encourage me to continue
 
 ## Changelog
 
+- 1.1.0
+    - Create test mode
 - 1.0.1
     - Check that the coordinates entered are not out of the board
 - 1.0.0
