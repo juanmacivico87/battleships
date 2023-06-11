@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "battleships"
-version = "1.0.1"
+version = "1.1.0"
 description = "Search and destroy the ships"
 authors = ["Juan Manuel Civico Cabrera <juanmacivico87@gmail.com>"]
 

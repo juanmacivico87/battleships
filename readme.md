@@ -19,6 +19,8 @@ This is a project developed in Python to play the famous game "Battleships".
 
 To play "Battleships", just go to the project folder and run the command ```python3 app/app.py```. Then, follow the instructions that appear on the screen of your console and... Enjoy!!!
 
+A little trick: If you want to play in test mode, when asked for your name, say your name is *Tester*.
+
 ## Informative note
 
 This is an Open Source project, so feel free to download, use and extend it as you wish.
@@ -27,6 +29,8 @@ Did you like it? If so, add a star to the repository to encourage me to continue
 
 ## Changelog
 
+- 1.1.0
+    - Create test mode
 - 1.0.1
     - Check that the coordinates entered are not out of the board
 - 1.0.0

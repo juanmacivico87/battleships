@@ -13,7 +13,10 @@ class Board(object):
 
     def print_board(self, player, ship):
         system('clear')
-        # print(f'Help: {ship.ships}')
+        
+        if (player.name == 'Tester'):
+            print(f'Help: {ship.ships}')
+            
         print(f'Player: {player.name}')
         print(f'Ships: {ship.num_ships} ({ship.ships_found})')
         print(f'Score: {player.score}')
