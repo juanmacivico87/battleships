@@ -7,21 +7,25 @@ class App(object):
         self.player = Player()
         self.board = Board()
         self.ship = Ship()
+        
+    def set_coordinate(self, axis):
+        coordinate = self.board.board_length
+                
+        while(coordinate >= self.board.board_length):
+            coordinate = input(f'Please, enter {axis} coordinate between 0 and {(self.board.board_length - 1)}: ')
+            
+            if (coordinate.isnumeric() == False):
+                coordinate = self.board.board_length
+                continue
+                
+            coordinate = int(coordinate)
+        
+        return coordinate
     
     def play(self):
         while(self.player.lifes > 0):
-            x = input('Please, enter X coordinate (0 - 9)')
-            
-            if (x.isnumeric() == False):
-                x = 0
-                
-            y = input('Please, enter Y coordinate (0 - 9)')
-                
-            if (y.isnumeric() == False):
-                y = 0
-                
-            x = int(x)
-            y = int(y)
+            x = self.set_coordinate('X')
+            y = self.set_coordinate('Y')
             
             has_ship = self.ship.find_ship(x, y)
             self.board.display_box(x, y, has_ship)

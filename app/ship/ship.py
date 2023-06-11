@@ -29,34 +29,25 @@ class Ship(object):
 
         if (self.num_ships > self.max_ships):
             system('clear')
-            print('Sorry, but no more than %d ships are allowed on the board' % (self.max_ships))
+            print(f'Sorry, but no more than {self.max_ships} ships are allowed on the board')
             return False
 
         if (self.num_ships < self.min_ships):
             system('clear')
-            print('Sorry, but to play you need at least %d ships on the board' % (self.min_ships))
+            print(f'Sorry, but to play you need at least {self.min_ships} ships on the board')
             return False
 
         return True
 
     def set_num_ships(self):
         system('clear')
-        self.num_ships = input('How many ships do you want on the board?? (Please, enter a number between %d and %d) \n' % (
-            self.min_ships,
-            self.max_ships
-        ))
-
-        is_valid_number = self.check_num_ships()
-
+        is_valid_number = False
+        
         while(is_valid_number == False):
-            self.num_ships = input('How many ships do you want on the board?? (Please, enter a number between %d and %d) \n' % (
-                self.min_ships,
-                self.max_ships
-            ))
-
+            self.num_ships = input(f'How many ships do you want on the board?? (Please, enter a number between {self.min_ships} and {self.max_ships}) \n')
             is_valid_number = self.check_num_ships()
 
-        print('Great!!! %d ships coming up!!!' % (self.num_ships))
+        print(f'Great!!! {self.num_ships} ships coming up!!!')
         sleep(2)
         
     def find_ship(self, x, y):
